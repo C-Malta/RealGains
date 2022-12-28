@@ -1,0 +1,185 @@
+html {
+    display: table;
+    margin: auto;
+    font-family: Arial;
+    background: black;
+    width: 80%;
+    height: 100%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #FFFF00;
+    border:40px solid #FFFF00 ;
+    height: 100%;
+}
+
+
+div.button_row{
+    text-align: center;
+
+}
+
+div.inline_button{
+     display: inline-block;
+     vertical-align: middle;
+
+
+}
+
+
+
+input[type=submit].portfolioprojectbutton
+{
+    color: #FFFF00;
+    background-color: #252730;
+    background-image: linear-gradient(0deg, #0f1013, #292c36);
+    border-color: #FFFF00;
+    cursor:pointer;
+}
+
+input[type=submit]
+{
+    color: #FFFF00;
+    background-color: #252730;
+    background-image: linear-gradient(0deg, #0f1013, #292c36);
+    border-color: #FFFF00;
+    cursor:pointer;
+    width: 120px;
+    height: 60px;
+    font-size:20px;
+}
+
+
+input[type=number]{
+    width: 20%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:4px 0;
+    outline:none;
+    padding:4px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+  input[type=date]{
+    width: 20%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:4px 0;
+    outline:none;
+    padding:4px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+
+  input[type=number]:focus{
+    border-color:#FFFF00;
+    box-shadow:0 0 2px 0 #FFFF00;
+  }
+
+  p {font-weight: bold;}
+
+
+  h1.realgains {
+
+    display: table-cell;
+    vertical-align: middle;
+    border:3px solid #FFFF00;
+    background: black;
+    color:#FFFF00;
+    width:95%;
+
+  }
+
+
+
+div.center_element{
+
+     display: block;
+    text-align: center;
+
+}
+
+
+   h1.portfolio {
+
+
+    width: 70%;
+    text-align: middle;
+    display: inline-block;
+    border:3px solid #FFFF00;
+    background: black;
+    color:#FFFF00;
+    font-size: 60px;
+
+  }
+
+h2.portfolio{
+
+       text-align: middle;
+       display: inline-block;
+       color: black;
+       font-size:30px;
+
+
+   }
+
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    color: #FFFF00;
+    background:black;
+}
+
+form.calculator{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border:5px solid black;
+    padding:15px;
+    width:50%;
+    background: black;
+
+}
+
+h2{color:#FFFF00;}
+
+.pppu{
+    text-align: center;
+    border:3px solid #FFFF00;
+    width:95%;
+
+
+}
+
+.ppu{
+    text-align: center;
+    border:3px solid #FFFF00;
+    width:43%;
+
+
+}
+
+
+.more {
+  cursor:pointer;
+}
+
+
+
+button{
+
+   color:#FFFF00 ;
+    background-color: #252730;
+    background-image: linear-gradient(0deg, #0f1013, #292c36);
+    border-color: #FFFF00;
+    cursor:pointer;
+}
+
