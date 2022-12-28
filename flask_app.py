@@ -41,10 +41,13 @@ def realgains():
 
             return '''
                 <html>
+                <link rel="stylesheet" href='/staticFiles/main.css' />
                     <body>
                         <p>The nominal gains on this asset over the given time period are: {nominal_result}% </br>
                         the M2-adjusted real gains for this asset over the given time period are: {result}% </p>
-                        <p><a href="/">Click here to calculate again</a>
+                        <p><form action="/realgains">
+                        <input type="submit" value="Return" />
+                        </form></p>
                     </body>
                 </html>
             '''.format(result=result, nominal_result=nominal_result)
@@ -52,24 +55,25 @@ def realgains():
 
 
     return '''
-        <html>
+        <html lang="en">
+        <link rel="stylesheet" href='/staticFiles/main.css' />
         <title>Real Gains</title>
 
             <body>
 
             <!-- explanation of the tool and it's purpose -->
 
-            <h1>Real Gains:</h1>
+            <h1 class = "realgains">    &nbsp;    Real Gains:</h1>
             <p><font size="+1">This is a simple calculator made to measure the value increase of an asset in relationship to the money supply.<br/>
             <br/>
             Inflation as measured through the CPI is a highly innacurate measurement of loss in total purchasing power,<br/>
             this is because it merely accounts for the nominal price changes in the final goods and services provided to the consumer.<br/>
-            Such a measurement does not account for the loss in purchasing power for businesses in the form of materials, goods and services that precede the consumer market.<br/>
+            Such a measurement does not account for the loss in purchasing power for businesses in the form of materials, <br/>goods and services that precede the consumer market.<br/>
             Which in turn makes adjusting for inflation alone an inefficient way of judging the success of an investment. </br>
             <br/>
 
             Here, we are calculating the value of an asset as a ratio between it's nominal value in US dollars and the M2 money supply. <br/>
-            This allows us to measure increases or decreases in it's value as a share of the total purchasing power, rather than simply nominal changes.<br/>
+            This allows us to measure increases or decreases in its value as a share of the total purchasing power, rather than simply nominal changes.<br/>
             </br>
              Type the price of an asset in a given date in the past, select that date, and then type in the current price of said asset.
 
@@ -78,12 +82,12 @@ def realgains():
 
 
                 {errors}
-                <form method="post" action="http://caiomaltacoutinho.pythonanywhere.com/realgains">
-                    <p> <h2>Past unit price and date of measurement</h2>
-                    <p><input name="past_price_per_unit_form" /> <input type="date" name="raw_date_form" min='1980-11-03' max='2021-02-01'/> </p>
-                    <p> <h2>Current unit price</p></h2>
-                    <p><input name="current_price_per_unit_form"</p>
-                    <p><input type="submit" value="Check real gains" /></p>
+                <form method="post" class = "calculator" action="http://caiomaltacoutinho.pythonanywhere.com/realgains">
+                    <p> <h2 class="pppu"> Past unit price and date of measurement</h2></p>
+                    <p><input type = "number" name="past_price_per_unit_form" /> <input type="date" name="raw_date_form" min='1980-11-03' max='2021-02-01'/> </p>
+                    <p> <h2 class="ppu">Current unit price</h2></p>
+                    <p><input type = "number" name="current_price_per_unit_form"</p>
+                    <p><input type="submit" value="Calculate"/></p>
                 </form>
 
            <!-- #explanation for possibly innacurate data and limited date range -->
